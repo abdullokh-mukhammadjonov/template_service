@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS uzkad_action_logs;

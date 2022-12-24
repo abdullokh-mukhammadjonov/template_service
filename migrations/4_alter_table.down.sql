@@ -1,0 +1,1 @@
+ALTER TABLE file_track DROP COLUMN file_name_id
