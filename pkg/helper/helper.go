@@ -4,16 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"mime/multipart"
-	"net/http"
 	"os"
 	"path"
 	"strings"
 
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 	"google.golang.org/grpc/codes"
@@ -274,53 +271,4 @@ func ClearFolder(folder string) error {
 		}
 	}
 	return nil
-}
-
-func GetGovernmentAPItoken(cfg config.Config) (token string, request map[string]interface{}, err error) {
-	type GovernmentAPIToken struct {
-		Refresh string `json:"refresh"`
-		Access  string `json:"access"`
-	}
-
-	var (
-		req      *http.Request
-		respBody = GovernmentAPIToken{}
-	)
-
-	body := map[string]interface{}{
-		"username": "yer_electron",
-		"password": "10#9x&DBSuxX",
-	}
-	client := http.Client{}
-
-	bodyByte, _ := json.Marshal(body)
-	bodyBuffer := bytes.NewBuffer(bodyByte)
-	req, err = http.NewRequest(http.MethodPost, cfg.HokimyatTokenUrl, bodyBuffer)
-
-	req.Header.Set("Content-Type", "application/json")
-
-	if err != nil {
-		return "", body, err
-	}
-
-	fmt.Println("getting token ...")
-	response, err := client.Do(req)
-	if err != nil {
-		fmt.Print("err 1, ", err)
-		return "", body, err
-	}
-
-	respData, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		fmt.Print("err 2, ", err)
-		return "", body, err
-	}
-
-	err = json.Unmarshal(respData, &respBody)
-	if err != nil {
-		fmt.Print("err 3, ", err)
-		return "", body, errors.New("from token unmarshal :" + string(respData) + "    => " + err.Error())
-	}
-
-	return respBody.Access, body, nil
 }

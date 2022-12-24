@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jmoiron/sqlx"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
+	cs "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/storage/repo"
 )
 
@@ -103,7 +103,7 @@ func (or *orderRepo) Update(order map[string]interface{}, lawType string) error 
 	return nil
 }
 
-func (or *orderRepo) Get(req vcs.) (res content_service.ExcelReportResponse, err error) {
+func (or *orderRepo) Get(req *cs.GetHandbooksRequest) (res *cs.GetHandbooksResponse, err error) {
 	fmt.Println("storage.GetOrder.req.entityID:")
 	getQuery := `
 		SELECT
@@ -114,9 +114,31 @@ func (or *orderRepo) Get(req vcs.) (res content_service.ExcelReportResponse, err
 			file_link=$1
 	`
 
-	row := or.db.QueryRow(getQuery, req.DocType)
+	row := or.db.QueryRow(getQuery, &req)
 	err = row.Scan(
-		&res.FileLink,
+		&res,
+	)
+	if err != nil {
+		return res, err
+	}
+
+	return res, nil
+}
+
+func (or *orderRepo) GetOne(req *cs.GetOneRequest) (res *cs.GetOneHandbookResponse, err error) {
+	fmt.Println("storage.GetOrder.req.entityID:")
+	getQuery := `
+		SELECT
+			file_link,
+		FROM 
+			orders
+		WHERE
+			file_link=$1
+	`
+
+	row := or.db.QueryRow(getQuery, &req)
+	err = row.Scan(
+		&res,
 	)
 	if err != nil {
 		return res, err

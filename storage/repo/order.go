@@ -6,6 +6,6 @@ import (
 
 type OrderI interface {
 	Create(req map[string]interface{}, lawType string) error
-	Get(content_service.) (content_service.ExcelReportResponse, error)
-	GetOne(content_service.ExcelReportRequest) (content_service.ExcelReportResponse, error)
+	Get(*content_service.GetHandbooksRequest) (*content_service.GetHandbooksResponse, error)
+	GetOne(*content_service.GetOneRequest) (*content_service.GetOneHandbookResponse, error)
 }

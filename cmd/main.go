@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/lib/pq"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	pb "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/integration_service"
+	pb "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/logger"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/service"
 	"gitlab.udevs.io/ekadastr/ek_integration_service/service/grpc_client"
@@ -40,7 +40,7 @@ func main() {
 	thirdPartyService := service.ThirdPartyService(connDB, log, grpcClients, cfg)
 
 	s := grpc.NewServer()
-	pb.RegisterThirdPartyServiceServer(s, thirdPartyService)
+	pb.RegisterHandbooksServiceServer(s, thirdPartyService)
 
 	log.Info("Listening on port", logger.String("port", cfg.RPCPort))
 
