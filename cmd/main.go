@@ -18,7 +18,7 @@ import (
 
 func main() {
 	cfg := config.Load()
-	log := logger.New(cfg.Environment, "ek_integration_service")
+	log := logger.New(cfg.Environment, "template_service")
 
 	defer func() {
 		if err := recover(); err != nil {

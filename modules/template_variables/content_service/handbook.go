@@ -1,4 +1,4 @@
-package ek_content_service
+package content_service
 
 type Handbook struct {
 	Active      bool   `json:"active"`

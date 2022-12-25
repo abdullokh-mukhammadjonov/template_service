@@ -165,7 +165,7 @@ Global variables please, make sure you get to know about the flow:
 
  On every service we have two submodule:
  
-* [ek_protos](https://github.com/abdullokh-mukhammadjonov/template_variables)
+* [template_protos](https://github.com/abdullokh-mukhammadjonov/template_variables)
 > This is for grpc proto files all service protos in one file as a submodule in all services.
 * [template_variables](https://github.com/abdullokh-mukhammadjonov/template_variables)
 > This is for global variables for all service type structres and swagger documentation, please, if you want to change it, make sure you have your own branch, ```Do not change without permission on master branch``` in one file as a submodule in all services.
