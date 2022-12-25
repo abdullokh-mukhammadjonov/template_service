@@ -1,9 +1,9 @@
 package storage
 
 import (
+	"github.com/abdullokh-mukhammadjonov/template_service/storage/postgres"
+	"github.com/abdullokh-mukhammadjonov/template_service/storage/repo"
 	"github.com/jmoiron/sqlx"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/storage/postgres"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/storage/repo"
 )
 
 type StorageI interface {

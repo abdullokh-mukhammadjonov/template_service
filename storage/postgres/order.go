@@ -3,9 +3,9 @@ package postgres
 import (
 	"fmt"
 
+	cs "github.com/abdullokh-mukhammadjonov/template_service/genproto/content_service"
+	"github.com/abdullokh-mukhammadjonov/template_service/storage/repo"
 	"github.com/jmoiron/sqlx"
-	cs "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/storage/repo"
 )
 
 type orderRepo struct {

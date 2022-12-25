@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/helper"
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
+	"github.com/abdullokh-mukhammadjonov/template_service/pkg/helper"
 	// "github.com/bxcodec/faker/v3"
 )
 

@@ -1,12 +1,12 @@
 package service
 
 import (
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
+	cs "github.com/abdullokh-mukhammadjonov/template_service/genproto/content_service"
+	"github.com/abdullokh-mukhammadjonov/template_service/pkg/logger"
+	"github.com/abdullokh-mukhammadjonov/template_service/service/grpc_client"
+	"github.com/abdullokh-mukhammadjonov/template_service/storage"
 	"github.com/jmoiron/sqlx"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	cs "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/logger"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/service/grpc_client"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/storage"
 )
 
 //order service

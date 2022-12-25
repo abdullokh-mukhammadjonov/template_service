@@ -1,7 +1,7 @@
 package repo
 
 import (
-	"gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
+	"github.com/abdullokh-mukhammadjonov/template_service/genproto/content_service"
 )
 
 type OrderI interface {

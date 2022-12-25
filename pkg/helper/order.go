@@ -11,11 +11,11 @@ import (
 	"os"
 	"strings"
 
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
+	"github.com/abdullokh-mukhammadjonov/template_service/pkg/util"
 	"github.com/google/uuid"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/util"
 )
 
 func GetFileFromMinio(cfg config.Config, fileName string, folderName string) error {

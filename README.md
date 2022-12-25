@@ -82,7 +82,7 @@
 
   
 
-This is a government project which is being develeped by Udevs team. Please, If you join this project, make sure that you follow these rules:
+This is a government project which is being develeped by ___ team. Please, If you join this project, make sure that you follow these rules:
 
   
 

@@ -11,7 +11,7 @@ import (
 	"path"
 	"strings"
 
-	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/logger"
+	"github.com/abdullokh-mukhammadjonov/template_service/pkg/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

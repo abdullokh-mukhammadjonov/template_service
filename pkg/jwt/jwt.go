@@ -4,9 +4,9 @@ import (
 	"errors"
 	"time"
 
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/google/uuid"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
 )
 
 func generate(claims jwt.MapClaims, exp int64, key interface{}) (string, error) {

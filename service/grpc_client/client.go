@@ -3,8 +3,8 @@ package grpc_client
 import (
 	"fmt"
 
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	cs "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
+	cs "github.com/abdullokh-mukhammadjonov/template_service/genproto/content_service"
 	"google.golang.org/grpc"
 )
 

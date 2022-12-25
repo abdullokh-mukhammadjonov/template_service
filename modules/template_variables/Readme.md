@@ -81,7 +81,7 @@
 
   
 
-This is a government project which is being develeped by Udevs team. Please, If you join this project, make sure that you follow these rules:
+This is a government project which is being develeped by ____ team. Please, If you join this project, make sure that you follow these rules:
 
   
 
@@ -139,7 +139,7 @@ This is an example of how to list things you need to use the software and how to
   
 
 ```sh
-git clone https://github.com/abdullokh-mukhammadjonov/template_variables.git.git
+git clone https://github.com/abdullokh-mukhammadjonov/template_variables.git
 ```
 
 If you run code locally please, make sure that you have golang version 1.15 or above. Besides that, please make sure mongodb running on your local machine on default port.
@@ -232,7 +232,7 @@ Contributions are what make the open source community such an amazing place to b
 
   
 
-Dilmurod Yangiboev - [@icon_me](dilmurod.yangiboev@gmail.com) - dilmurod.yangiboev@gmail.com
+Abdulloh Muhammadjonov - [@icon_me](abdullohconfident@gmail.com) - abdullohconfident@gmail.com
 
   
 

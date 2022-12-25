@@ -7,12 +7,12 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
+	"github.com/abdullokh-mukhammadjonov/template_service/config"
+	pb "github.com/abdullokh-mukhammadjonov/template_service/genproto/content_service"
+	"github.com/abdullokh-mukhammadjonov/template_service/pkg/logger"
+	"github.com/abdullokh-mukhammadjonov/template_service/service"
+	"github.com/abdullokh-mukhammadjonov/template_service/service/grpc_client"
 	_ "github.com/lib/pq"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/config"
-	pb "gitlab.udevs.io/ekadastr/ek_integration_service/genproto/content_service"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/pkg/logger"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/service"
-	"gitlab.udevs.io/ekadastr/ek_integration_service/service/grpc_client"
 	"google.golang.org/grpc"
 )
 
