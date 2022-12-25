@@ -1,4 +1,4 @@
-package ek_variables
+package template_variables
 
 // Please, DO NOT EDIT CONST
 // just add

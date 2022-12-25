@@ -1,4 +1,4 @@
-package ek_variables
+package template_variables
 
 type Error struct {
 	Code    int64  `json:"code"`

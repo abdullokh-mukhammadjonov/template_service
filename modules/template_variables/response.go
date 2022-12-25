@@ -1,4 +1,4 @@
-package ek_variables
+package template_variables
 
 type Response struct {
 	SessionID  string `json:"session_id"`

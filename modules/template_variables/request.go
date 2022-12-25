@@ -1,4 +1,4 @@
-package ek_variables
+package template_variables
 
 type GetRequest struct {
 	ID string `json:"id"`
